@@ -185,3 +185,7 @@ footer .wrap{display:grid;gap:14px}
 .ico.muse img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
 .prompt .pl{white-space:pre-line;line-height:1.9;font-size:16px}
 .meta-line{margin:6px 0 0;color:var(--ink-soft,#5C6A94)}
+.en-s{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--sky-d);font-weight:600;margin-left:6px}
+.card .ex{color:var(--pink-d,#E0568F);font-weight:700;font-size:15px;margin-top:8px}
+.guide-sec.opc{background:linear-gradient(135deg,rgba(140,200,255,.18),rgba(255,183,213,.22));border-radius:var(--radius);padding:24px 20px}
+@media (max-width:560px){nav{gap:2px;flex-wrap:nowrap}nav a{padding:8px 11px;font-size:14px;white-space:nowrap}}
