@@ -55,7 +55,7 @@
           '<span class="tag">' + (w.sample ? '示例 · ' : '') + labels[cat] + '</span></div>';
         var media = '';
         if (safeUrl(w.audio)) media += '<audio controls preload="none" src="' + esc(safeUrl(w.audio)) + '"></audio>';
-        var link = safeUrl(w.link) ? '<a class="link" href="' + esc(safeUrl(w.link)) + '" target="_blank" rel="noopener">查看作品 →</a>' : '';
+        var link = safeUrl(w.link) ? '<a class="link" href="' + esc(safeUrl(w.link)) + '" target="_blank" rel="noopener">' + esc(w.linkText || '查看作品 →') + '</a>' : '';
         return '<article class="work' + (w.sample ? ' sample' : '') + '">' + thumb +
           '<div class="body"><h3>' + esc(w.title) + '</h3><div class="by">作者：' + esc(w.author) + '</div><p>' + esc(w.desc) + '</p>' + media + link + '</div></article>';
       }).join('');
