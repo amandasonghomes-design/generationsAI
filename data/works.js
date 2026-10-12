@@ -1,0 +1,40 @@
+// 作品清单 — 新增作品只要在下面再加一段 { ... }，保存后重新部署即可。
+// category: song(歌曲) / video(视频) / agent(AI Agent) / other(其他)
+// 可选字段：image(封面图片路径或网址)、audio(音频文件)、video(视频文件)、link(外部链接)
+// sample: true 表示这是示例占位，换成真实作品后请删除这一行或改为 false。
+window.WORKS = [
+  { title: "为自由而战的猫猫 🐱", author: "Amanda", category: "video",
+    desc: "15 秒 AI 生成短片：为自由而战的小猫士兵，点击播放。",
+    image: "/media/cat-soldier-poster.jpg", video: "/media/cat-soldier.mp4" },
+  { title: "西部牛仔小猫", author: "Amanda", category: "video",
+    desc: "8 秒 AI 生成短片：西部小镇里的牛仔小猫，点击播放。",
+    image: "/media/ai-cat-poster.jpg", video: "/media/ai-cat.mp4" },
+  { title: "若你归来", author: "Amanda", category: "song",
+    desc: "用 Suno 创作的歌曲，点击下方链接收听。",
+    image: "https://cdn2.suno.ai/af3544b8-27c9-4a8a-8cba-8061c4f35b74_60c7e3b0.jpeg",
+    link: "https://suno.com/s/pRVvSHxlqdXHWxk4" },
+  { title: "长风起", author: "Amanda", category: "song",
+    desc: "用 Suno 创作的歌曲，点击下方链接收听。",
+    image: "https://cdn2.suno.ai/50f1f9de-9469-40cd-90b8-23bdc60d1c6a_372232b5.jpeg",
+    link: "https://suno.com/s/jC8a4qGNhcbRB9OC" },
+  { title: "Better In Your Courts", author: "Michael（Suno: @mjxiong2009）", category: "song",
+    desc: "用 Suno 创作的歌曲，点击下方链接收听。",
+    image: "https://cdn2.suno.ai/image_large_21874822-13af-4e74-9631-e8f9b22df881.jpeg",
+    link: "https://suno.com/s/eHBKjn8xuvN4ApiA" },
+  { title: "The Lord Is My Refuge", author: "Maggie Jiao（Suno: @jwint0717）", category: "song",
+    desc: "用 Suno 创作的歌曲，点击下方链接收听。",
+    image: "https://cdn2.suno.ai/image_large_e295fd7c-969b-4640-ba65-fe6a2facb6a5.jpeg",
+    link: "https://suno.com/s/O0JP6SNpjux6GXB4" },
+  { title: "Under Your Wings", author: "rebecca821973（Suno）", category: "song",
+    desc: "用 Suno 创作的歌曲，点击下方链接收听。",
+    image: "https://cdn2.suno.ai/image_large_1de5913f-c7fb-4a80-9779-02ca8b0efa16.jpeg",
+    link: "https://suno.com/s/aSk0sIIOZBXt7loc" },
+  { title: "平安的夜晚", author: "作者姓名", category: "song",
+    desc: "示例：用 Suno 创作的赞美诗。请替换成真实作品。", sample: true },
+  { title: "社团活动宣传短片", author: "作者姓名", category: "video",
+    desc: "示例：30 秒 AI 宣传短片。请替换成真实作品。", sample: true },
+  { title: "活动筹备小助手", author: "作者姓名", category: "agent",
+    desc: "示例：用 AI Agent 整理筹备清单与时间表。请替换成真实作品。", sample: true },
+  { title: "儿童诗歌绘本", author: "作者姓名", category: "other",
+    desc: "示例：AI 协助创作的诗歌与插图。请替换成真实作品。", sample: true }
+];

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quick Reference Guide · 智启研习社</title>
+<meta name="description" content="AI 创作速查：Suno 做歌曲、AI 视频、AI Agent、Prompt 公式与负责任使用。">
+<meta name="theme-color" content="#F3F8FF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='28' fill='%238CC8FF'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' fill='white'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="/"><span class="logo">✦</span><span data-site-name>智启研习社</span></a><nav aria-label="主导航"><a href="/">首页</a><a href="/gallery">作品展览</a><a href="/guide" aria-current="page">Quick Guide</a></nav></div></header>
+
+<main>
+<div class="page-head"><div class="wrap">
+  <span class="pill">Quick Reference Guide</span>
+  <h1>AI 创作速查指南</h1>
+  <p>适合初学者的 step-by-step。Prompt 示例可以直接复制使用。</p>
+</div></div>
+<section><div class="wrap guide-layout">
+  <aside class="toc" aria-label="目录"><strong class="mono">CONTENTS</strong>
+    <a href="#intro">① 工具与关键词</a><a href="#prompt">② Prompt 公式</a><a href="#song">③ AI 歌曲 (Suno)</a><a href="#video">④ AI 视频</a><a href="#agent">⑤ AI Agent</a><a href="#safe">⑥ 负责任使用</a></aside>
+  <div>
+
+  <div class="guide-sec" id="intro">
+    <div class="eyebrow">// 01</div><h2>工具与关键词</h2>
+    <div class="grid g2" style="margin-top:14px">
+      <div class="card"><div class="ico t-v">💬</div><h3>ChatGPT</h3><p>万能对话助手：写作、翻译、头脑风暴、学习问答。适合入门第一站。</p></div>
+      <div class="card"><div class="ico t-t">📚</div><h3>Claude</h3><p>擅长阅读与总结长文档、写作润色、逻辑整理。</p></div>
+      <div class="card"><div class="ico t-r">✨</div><h3>Muse</h3><p>创意创作工具，把灵感变成作品。（具体功能请以工具官方说明为准。）</p></div>
+      <div class="card"><div class="ico t-b">🧠</div><h3>四个关键词</h3><p><b>Generative AI</b> 生成式 AI · <b>LLM</b> 大语言模型 · <b>Prompt</b> 提示词 · <b>AI Agent</b> 智能助手</p></div>
+    </div>
+    <div class="tip">💡 初学者建议：先选一个工具，每天练习 10 分钟，用熟了再扩展。</div>
+  </div>
+
+  <div class="guide-sec" id="prompt">
+    <div class="eyebrow">// 02</div><h2>Prompt 公式</h2>
+    <p class="lead">把想要的结果说清楚，AI 的答案就会好很多。</p>
+    <div class="formula">
+      <div><small>ROLE</small><b>角色</b><span>你是谁</span></div>
+      <div><small>TASK</small><b>任务</b><span>要做什么</span></div>
+      <div><small>CONTEXT</small><b>背景</b><span>给谁、为何</span></div>
+      <div><small>FORMAT</small><b>格式</b><span>长度与样式</span></div>
+    </div>
+    <div class="prompt"><span class="lab">PROMPT 示例</span><p>你是一位耐心的社团活动策划，请帮我写一段 100 字的邀请文案，用于 10 月的线上公益讲座、发到微信群，语气温暖，并附 3 个标题选项。</p><button class="copy" type="button">复制</button></div>
+    <div class="tip">💡 不满意就继续追问：“再说得更简单一点”“换成英文版”“改短一点”。</div>
+  </div>
+
+  <div class="guide-sec" id="song">
+    <div class="eyebrow">// 03</div><h2>🎵 用 Suno 做 AI 歌曲</h2>
+    <p class="lead">Suno 是一个用 AI 生成歌曲的 app，五步完成。</p>
+    <ol class="steps">
+      <li><b>歌词</b><span class="en">LYRICS</span><p>输入或粘贴歌词。可以先用 ChatGPT / Claude 写好，再贴进来。</p></li>
+      <li><b>风格</b><span class="en">STYLE</span><p>用文字描述曲风与情绪，例如：柔和、钢琴、慢板、温暖女声。</p></li>
+      <li><b>生成</b><span class="en">CREATE</span><p>点击 Create，AI 会生成歌曲。可多生成几个版本挑选。</p></li>
+      <li><b>编辑</b><span class="en">EDIT · COVER ART</span><p>修改歌名，并设定封面（Cover Art）。</p></li>
+      <li><b>发表</b><span class="en">PUBLISH</span><p>发布并分享你的作品。</p></li>
+    </ol>
+    <div class="prompt"><span class="lab">PROMPT · 先请 AI 写歌词</span><p>请写一首中文赞美诗：2 段主歌 + 副歌，主题是“平安与盼望”。节奏温柔舒缓，歌词简单易唱，适合小组崇拜，避免生僻字。</p><button class="copy" type="button">复制</button></div>
+    <div class="tip">💡 追问示例：“把副歌改得更简短，每句不超过 8 个字”。</div>
+    <div class="tip warn">⚠️ 歌词请人工审阅；发布前留意版权与授权，并保存 Prompt 与修改版本。</div>
+  </div>
+
+  <div class="guide-sec" id="video">
+    <div class="eyebrow">// 04</div><h2>🎬 AI 视频制作五步</h2>
+    <ol class="steps">
+      <li><b>脚本</b><span class="en">SCRIPT</span><p>先写故事大纲，决定要讲什么、给谁看。</p></li>
+      <li><b>分镜</b><span class="en">STORYBOARD</span><p>规划每个镜头：画面、旁白、字幕。</p></li>
+      <li><b>画面</b><span class="en">VISUALS</span><p>用 AI 生成图片或视频片段（选择你喜欢的 AI 图像／视频工具）。</p></li>
+      <li><b>配音</b><span class="en">VOICEOVER</span><p>加入 AI 旁白与配乐。</p></li>
+      <li><b>剪辑</b><span class="en">EDIT</span><p>合成片段并加上字幕，导出分享。</p></li>
+    </ol>
+    <div class="prompt"><span class="lab">PROMPT · 视频脚本</span><p>请为“智启研习社 AI 公益论坛”写一个 30 秒宣传短片脚本，分成 5 个镜头，每个镜头包含画面描述、旁白和字幕。</p><button class="copy" type="button">复制</button></div>
+    <div class="tip">💡 第一个视频建议：30 秒活动宣传短片、教学微课或公益故事分享。</div>
+  </div>
+
+  <div class="guide-sec" id="agent">
+    <div class="eyebrow">// 05</div><h2>🤖 AI Agent：从聊天到做事</h2>
+    <div class="grid g2" style="margin-top:14px">
+      <div class="card"><h3>聊天 AI</h3><p>一问一答，每一步由你指挥。擅长写、改、解释，像随时待命的顾问。</p></div>
+      <div class="card"><h3>AI Agent</h3><p>理解目标、自己拆解步骤，并调用工具（搜索、文件、日历）完成任务，像会主动做事的助理。</p></div>
+    </div>
+    <div class="formula" style="margin-top:14px">
+      <div><small>GOAL</small><b>目标</b></div><div><small>PLAN</small><b>规划</b></div><div><small>ACT</small><b>行动</b></div><div><small>CHECK</small><b>检查</b></div>
+    </div>
+    <div class="prompt"><span class="lab">PROMPT · 活动助理</span><p>帮我筹备下个月的线上讲座：列出筹备清单、写一段邀请文案，并整理成一周时间表。</p><button class="copy" type="button">复制</button></div>
+    <div class="tip">💡 常见用途：活动助理（报名、通知、提醒）· 研究助理（搜集、摘要）· 创作助理（歌词、脚本、文案）。</div>
+  </div>
+
+  <div class="guide-sec" id="safe">
+    <div class="eyebrow">// 06</div><h2>负责任地使用 AI</h2>
+    <div class="grid g2" style="margin-top:14px">
+      <div class="card"><h3>✅ 核对事实</h3><p>Fact-check：AI 可能出错，重要内容请自己再确认。</p></div>
+      <div class="card"><h3>🔒 保护隐私</h3><p>Privacy：不要输入密码、证件号码等个人敏感信息。</p></div>
+      <div class="card"><h3>©️ 尊重版权</h3><p>Copyright：确认作品与素材的使用范围。</p></div>
+      <div class="card"><h3>🏷️ 标注 AI 生成</h3><p>Disclosure：分享作品时，说明哪些部分由 AI 协助。</p></div>
+    </div>
+  </div>
+
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap"><div><strong data-site-name>智启研习社</strong> · AI 公益论坛 · © <span data-year>2026</span></div><p class="disc">免责声明：本网站为非营利公益分享，内容仅供学习与参考。对于因使用或误用本网站内容所造成的任何错误、损失或后果，智启研习社及讲者概不负责。<br>Disclaimer: This is a non-profit community site. Content is for educational purposes only; the organizers and contributors are not responsible for any misuse, errors, or losses arising from its use.</p></div></footer>
+
+<script src="/data/site.js"></script>
+<script src="/data/works.js"></script>
+<script src="/assets/app.js"></script>
+</body>
+</html>
