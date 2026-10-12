@@ -29,6 +29,7 @@ window.WORKS = [
     desc: "用 Suno 创作的歌曲，点击下方链接收听。",
     image: "https://cdn2.suno.ai/image_large_0866b7a6-60c7-473c-94e7-0cb4c6cb3469.jpeg",
     link: "https://suno.com/s/B4NoTTLW5tzyMoSF" },
-  { title: "儿童诗歌绘本", author: "作者姓名", category: "other",
-    desc: "示例：AI 协助创作的诗歌与插图。请替换成真实作品。", sample: true }
+  { title: "小云朵的彩虹礼物", author: "Amanda · AI 协助创作", category: "other",
+    desc: "儿童故事与插画示例：一朵小小的云，帮助了山坡上的小花。点击下方阅读完整绘本。",
+    image: "/media/story-cover.svg", link: "/story" }
 ];

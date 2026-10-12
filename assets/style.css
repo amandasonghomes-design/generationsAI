@@ -169,3 +169,15 @@ footer .wrap{display:grid;gap:14px}
 
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .chips span{padding:5px 14px;border-radius:999px;background:linear-gradient(135deg,rgba(140,200,255,.5),rgba(255,183,213,.5));font-weight:700;font-size:14px}
+
+/* children's story */
+.story{display:grid;gap:26px}
+.spread{display:grid;grid-template-columns:1.25fr 1fr;gap:28px;align-items:center;background:var(--card);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.9);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+.spread:nth-child(even){grid-template-columns:1fr 1.25fr}
+.spread:nth-child(even) figure{order:2}
+.spread figure{margin:0}
+.spread svg{width:100%;height:auto;border-radius:16px;display:block}
+.spread .pg{display:inline-block;font-family:var(--mono);font-size:13px;letter-spacing:.1em;color:var(--sky-d);margin-bottom:8px}
+.spread p{margin:0;font-size:clamp(18px,2.2vw,22px);line-height:2;color:var(--ink)}
+.story .back{margin:6px 0 0;text-align:center}
+@media (max-width:760px){.spread,.spread:nth-child(even){grid-template-columns:1fr}.spread:nth-child(even) figure{order:0}}
