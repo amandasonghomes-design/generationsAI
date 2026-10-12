@@ -163,3 +163,6 @@ footer .wrap{display:grid;gap:14px}
   .steps li{padding-left:66px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.prompt p{-webkit-user-select:text;user-select:text}
+.copy{touch-action:manipulation;min-height:36px}

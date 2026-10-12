@@ -4,13 +4,32 @@
   document.querySelectorAll('[data-site-name]').forEach(function(el){ el.textContent = S.name || '智启研习社'; });
   document.querySelectorAll('[data-year]').forEach(function(el){ el.textContent = new Date().getFullYear(); });
 
-  // 一键复制 Prompt
+  // 一键复制 Prompt（兼容手机内置浏览器：先 execCommand，再 Clipboard API，最后选取文字让用户长按复制）
+  function legacyCopy(text){
+    try {
+      var t = document.createElement('textarea');
+      t.value = text; t.setAttribute('readonly', '');
+      t.style.cssText = 'position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;font-size:16px';
+      document.body.appendChild(t); t.focus(); t.select(); t.setSelectionRange(0, text.length);
+      var ok = document.execCommand('copy');
+      document.body.removeChild(t);
+      return !!ok;
+    } catch (e) { return false; }
+  }
+  function selectNode(node){
+    try { var r = document.createRange(); r.selectNodeContents(node); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); } catch (e) {}
+  }
   document.querySelectorAll('.copy').forEach(function(btn){
+    var orig = btn.textContent;
+    function flash(msg){ btn.textContent = msg; setTimeout(function(){ btn.textContent = orig; }, 2200); }
     btn.addEventListener('click', function(){
-      var text = btn.parentElement.querySelector('p').innerText.trim();
-      var done = function(){ var o = btn.textContent; btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent = o; }, 1600); };
-      if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).then(done, done); }
-      else { var t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); try{document.execCommand('copy');}catch(e){} document.body.removeChild(t); done(); }
+      var p = btn.parentElement.querySelector('p');
+      var text = p.innerText.trim();
+      function manual(){ selectNode(p); flash('已选取，请长按→复制'); }
+      if (legacyCopy(text)) { flash('已复制 ✓'); return; }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function(){ flash('已复制 ✓'); }, manual);
+      } else { manual(); }
     });
   });
 
