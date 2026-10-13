@@ -77,3 +77,27 @@
     else { sub.style.display = 'none'; var n = document.getElementById('submit-note'); if (n) n.style.display = 'block'; }
   }
 })();
+
+/* visit counter (home page only) — abacus.jasoncameron.dev, fails silently */
+(function(){
+  var box = document.getElementById('visits'), num = document.getElementById('visit-n');
+  if (!box || !num) return;
+  var base = 'https://abacus.jasoncameron.dev/', ns = 'zhiqi-generationsai', key = 'home-visits';
+  var local = /^(localhost|127\.|0\.0\.0\.0)/.test(location.hostname);
+  var counted = false, flagOk = true;
+  try { counted = !!localStorage.getItem('zq_counted'); } catch (e) { flagOk = false; }
+  // count each browser once; local tests and storage-less browsers only read
+  var action = (!local && flagOk && !counted) ? 'hit' : 'get';
+  var ctl = ('AbortController' in window) ? new AbortController() : null;
+  var timer = setTimeout(function(){ if (ctl) ctl.abort(); }, 6000);
+  fetch(base + action + '/' + ns + '/' + key, ctl ? { signal: ctl.signal } : {})
+    .then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function(d){
+      clearTimeout(timer);
+      if (!d || typeof d.value !== 'number') return;
+      num.textContent = d.value.toLocaleString('en-US');
+      box.hidden = false;
+      if (action === 'hit') { try { localStorage.setItem('zq_counted', '1'); } catch (e) {} }
+    })
+    .catch(function(){ clearTimeout(timer); });
+})();
