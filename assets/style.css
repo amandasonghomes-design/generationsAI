@@ -201,3 +201,15 @@ footer .wrap{display:grid;gap:14px}
 .video-card figcaption{display:grid;gap:4px;padding:12px 4px 4px}
 .video-card figcaption span{color:var(--ink2);font-size:15px}
 .video-card figcaption a{font-weight:700;font-size:15px}
+.path-card{margin-top:18px;padding:20px;border-radius:var(--radius);background:linear-gradient(135deg,rgba(140,200,255,.2),rgba(255,183,213,.24));border:1px solid rgba(255,255,255,.9);box-shadow:var(--shadow)}
+.path-card h3{margin:10px 0 6px;font-size:22px}
+.path-card>p{margin:0;color:var(--ink2)}
+.path-tag{display:inline-block;padding:4px 14px;border-radius:999px;background:#fff;font-weight:800;font-size:14px;color:var(--pink-d,#E0568F)}
+.video-wrap video{position:absolute;inset:0;width:100%;height:100%;background:#000;object-fit:contain}
+.path-card .video-card{margin-top:16px}
+.grid.pc{margin-top:16px}
+.pl{margin:8px 0 0;padding-left:20px;display:grid;gap:8px;color:var(--ink2)}
+.pl b{color:var(--ink)}
+.card.pro{border-top:4px solid #7FD6BE}.card.con{border-top:4px solid #FFB98A}
+.path-title{margin:34px 0 0;font-size:22px}
+.path-title span{display:block;font-size:15px;font-weight:600;color:var(--ink2);margin-top:4px}
