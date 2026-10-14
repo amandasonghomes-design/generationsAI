@@ -40,5 +40,9 @@ window.WORKS = [
     link: "https://suno.com/s/NODbMe5c2YOGLF0k" },
   { title: "小云朵的彩虹礼物", author: "Amanda · AI 协助创作", category: "other",
     desc: "儿童故事与插画示例：一朵小小的云，帮助了山坡上的小花。点击下方阅读完整绘本。",
-    image: "/media/story-cover.svg", link: "/story" }
+    image: "/media/story-cover.svg", link: "/story" },
+  { title: "喵镇正午", author: "Amanda", category: "video",
+    desc: "30 秒 AI 短片：只给一张图和一句话，AI 自己编出三幕西部故事。做法见 Quick Guide。",
+    image: "/media/muse-cowboy-cats-poster.jpg", video: "/media/muse-cowboy-cats.mp4",
+    link: "/guide#muse-video", linkText: "查看做法 →" }
 ];
