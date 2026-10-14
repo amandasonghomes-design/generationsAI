@@ -101,3 +101,40 @@
     })
     .catch(function(){ clearTimeout(timer); });
 })();
+
+/* sci-fi space band: stars, meteors and a little comet (decorative) */
+(function(){
+  var bands = document.querySelectorAll('.hero, .page-head');
+  if (!bands.length) return;
+  var meteors = [
+    ['8%','88%','13s','0s','140px'], ['58%','84%','15s','9s','90px'],
+    ['44%','72%','16s','11s','120px']
+  ].map(function(m){ return '<i class="meteor" style="--t:'+m[0]+';--l:'+m[1]+';--dur:'+m[2]+';--delay:'+m[3]+';--len:'+m[4]+'"></i>'; }).join('');
+  var comet = '<div class="comet" style="--t:14%;--l:92%;--dur:30s;--delay:2s"><svg viewBox="0 0 40 40" aria-hidden="true">' +
+    '' +
+    '<polygon points="20.00,4.50 24.70,15.03 36.17,16.25 27.61,23.97 29.99,35.25 20.00,29.50 10.01,35.25 12.39,23.97 3.83,16.25 15.30,15.03" fill="#FFC21F" stroke="#FFC21F" stroke-width="3" stroke-linejoin="round"/>' +
+    '<circle cx="16" cy="20.5" r="1.8" fill="#5A3E1B"/><circle cx="24" cy="20.5" r="1.8" fill="#5A3E1B"/>' +
+    '<path d="M16.8 25 Q20 28.2 23.2 25" stroke="#5A3E1B" stroke-width="1.6" fill="none" stroke-linecap="round"/>' +
+    '<circle cx="13.2" cy="24.2" r="2" fill="#FF9F7A" opacity=".55"/><circle cx="26.8" cy="24.2" r="2" fill="#FF9F7A" opacity=".55"/></svg>' +
+    '<span class="tail"></span></div>';
+  for (var i = 0; i < bands.length; i++) {
+    var d = document.createElement('div');
+    d.className = 'space'; d.setAttribute('aria-hidden', 'true');
+    d.innerHTML = '<i class="stars s1"></i><i class="stars s2"></i>' + meteors + comet;
+    bands[i].insertBefore(d, bands[i].firstChild);
+  }
+})();
+
+/* occasional soft blinking of individual stars (decorative) */
+(function(){
+  var spaces = document.querySelectorAll('.space');
+  for (var s = 0; s < spaces.length; s++) {
+    var html = '';
+    for (var i = 0; i < 32; i++) {
+      var size = (Math.random() < .3 ? 3 : 2);
+      html += '<i class="tw" style="left:'+(Math.random()*100).toFixed(1)+'%;top:'+(Math.random()*100).toFixed(1)+'%;width:'+size+'px;height:'+size+'px;--d:'+(5+Math.random()*9).toFixed(1)+'s;--w:-'+(Math.random()*14).toFixed(1)+'s"></i>';
+    }
+    var wrap = document.createElement('div'); wrap.className = 'tw-wrap'; wrap.innerHTML = html;
+    spaces[s].appendChild(wrap);
+  }
+})();
